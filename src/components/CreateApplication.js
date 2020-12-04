@@ -34,7 +34,7 @@ class CreateApplication extends Component {
                         className="input-bar" 
                         alue={position} 
                         type='text' 
-                        placeholder={"Position"} 
+                        placeholder={"Job position"} 
                         style={{width: "90%"}} 
                         onChange={e => this.setState({ position: e.target.value })} 
                     />
@@ -43,7 +43,7 @@ class CreateApplication extends Component {
                         className="input-bar" 
                         alue={company} 
                         type='text' 
-                        placeholder={"Company"} 
+                        placeholder={"Company name"} 
                         style={{width: "90%"}} 
                         onChange={e => this.setState({ company: e.target.value })} 
                     />
@@ -52,7 +52,7 @@ class CreateApplication extends Component {
                         className="input-bar" 
                         alue={website} 
                         type='text' 
-                        placeholder={"Website"} 
+                        placeholder={"www.companywebsite.com"} 
                         style={{width: "90%"}} 
                         onChange={e => this.setState({ website: e.target.value })} 
                     />
