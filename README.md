@@ -65,6 +65,6 @@
 <hr/>
 
 <p align="center">⚡️ Mobile friendly!</p>
-<span align="center">
-  <img src="https://i.imgur.com/tbFUpwI.png" width="60%"/>
-</span>
+<p align="center">
+  <img src="https://i.imgur.com/tbFUpwI.png" width="50%"/>
+</p>
