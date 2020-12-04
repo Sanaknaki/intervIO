@@ -1,0 +1,67 @@
+scalar DateTime
+
+type Query {
+
+    info: String!
+    feed(filter: String, skip: Int, take: Int, orderBy: ApplicationOrderByInput): Feed!
+    application(id: ID!): Application
+}
+
+type Feed {
+    applications: [Application!]!
+    count: Int!
+}
+
+type Application {
+    id: ID!
+
+    createdAt: DateTime!
+    updatedAt: DateTime!
+
+    position: String!
+    company: String!
+    status: String!
+    website: String!
+    
+    interviewRounds: Int!
+
+    postedBy: User
+}
+
+type Mutation {
+    post(position: String!, company: String!, website: String!, status: String, interviewRounds: Int): Application!
+    signup(email: String!, password: String!, name: String!): AuthPayload
+    login(email: String!, password: String!): AuthPayload
+    updateInterviewRound(appId: Int): Application!
+    updateApplicationStatus(appId: Int, status: String!): Application!
+}
+
+type Subscription {
+    newApplication: Application
+    updateInterviewRound: Application
+    updateApplicationStatus: Application
+}
+
+type AuthPayload {
+    token: String
+    user: User
+}
+
+type User {
+    id: ID!
+    name: String!
+    email: String!
+    applications: [Application!]!
+}
+
+input ApplicationOrderByInput {
+    position: Sort
+    company: Sort
+    createdAt: Sort
+    updatedAt: Sort
+}
+
+enum Sort {
+    asc
+    desc
+}
