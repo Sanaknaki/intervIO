@@ -14,7 +14,8 @@
 /* from intervIO-master dir */
 "cd server/"
 "npm i"                                  // Install node modules for backend
-"npx prisma migrate save --experimental" // Saving the prisma DB schema
+"npx prisma migrate save --experimental" // Saving the prisma DB schema, since it's your first save 
+                                         // you have to give the migration a name (I use 'init')
 "npx prisma migrate up --experimenal" 
 "npx prisma generate"                    // Generate new DB migration
 "node src/index.js"                      // Start the database (runs on port 4000)
@@ -65,5 +66,5 @@
 
 <p align="center">⚡️ Mobile friendly!</p>
 <span align="center">
-  <img src="https://i.imgur.com/tbFUpwI.png" width="50%"/>
+  <img src="https://i.imgur.com/tbFUpwI.png" width="60%"/>
 </span>
